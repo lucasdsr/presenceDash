@@ -27,7 +27,9 @@
   --text-body-weight: 400;
   --text-body-line: 1.6;
 
-  --spacing-section-label-gap: 0.5rem;
+  --spacing-section-label-gap: 52px;
+  --section-underline-height: 4px;
+  --section-underline-width: 72px;
   --spacing-block-gap: 2rem;
   --spacing-column-gap: 3rem;
   --spacing-page-x: 1.5rem;
