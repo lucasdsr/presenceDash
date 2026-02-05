@@ -1,55 +1,18 @@
 function StatBlock({ number, title, description }) {
   return (
-    <div
-      className="flex flex-col items-start"
-      style={{ gap: 'var(--spacing-stat-inner-gap)', width: 'var(--width-impact-stats)' }}
-    >
-      <div
-        className="flex flex-row items-start"
-        style={{ gap: 'var(--spacing-stat-inner-gap)' }}
-      >
-        <span
-          className="font-[500] text-primary"
-          style={{
-            fontFamily: 'var(--font-poppins)',
-            fontSize: 'var(--text-stat-number)',
-            lineHeight: 'var(--text-stat-number-height)',
-          }}
-        >
+    <div className="flex flex-col items-start gap-stat-inner-gap w-impact-stats">
+      <div className="flex flex-row items-start gap-stat-inner-gap">
+        <span className="font-sans font-medium text-stat-number leading-stat-number text-primary">
           {number}
         </span>
-        <span
-          className="font-[500]"
-          style={{
-            fontFamily: 'var(--font-poppins)',
-            fontSize: 'var(--text-stat-plus)',
-            lineHeight: 'var(--text-stat-plus-height)',
-            color: 'var(--color-accent)',
-          }}
-        >
+        <span className="font-sans font-medium text-stat-plus leading-stat-plus text-accent">
           +
         </span>
       </div>
-      <h3
-        className="font-[500]"
-        style={{
-          fontFamily: 'var(--font-poppins)',
-          fontSize: 'var(--text-stat-title)',
-          lineHeight: 'var(--text-stat-title-height)',
-          color: 'var(--color-accent)',
-        }}
-      >
+      <h3 className="font-sans font-medium text-stat-title leading-stat-title text-accent">
         {title}
       </h3>
-      <p
-        className="font-normal"
-        style={{
-          fontFamily: 'var(--font-poppins)',
-          fontSize: 'var(--text-stat-desc)',
-          lineHeight: 'var(--text-stat-desc-height)',
-          color: 'var(--color-text-muted)',
-        }}
-      >
+      <p className="font-sans font-normal text-stat-desc leading-stat-desc text-text-muted">
         {description}
       </p>
     </div>

@@ -1,14 +1,9 @@
-@import './styles/theme.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply antialiased;
-    font-family: var(--font-poppins);
-    background-color: var(--color-bg);
-    color: var(--color-primary);
+    @apply antialiased font-sans bg-bg text-primary;
   }
 }

@@ -9,29 +9,14 @@ function App() {
     <PageLayout>
       <SectionTopDivider />
 
-      <div
-        className="flex flex-row items-start"
-        style={{
-          marginTop: 'var(--spacing-section-label-gap)',
-          gap: 'var(--spacing-two-col-gap)',
-        }}
-      >
-        <div
-          style={{ width: 'var(--width-our-impact)' }}
-          aria-labelledby="impact-heading"
-        >
+      <div className="flex flex-row items-start mt-section-label-gap gap-two-col-gap">
+        <div className="w-our-impact" aria-labelledby="impact-heading">
           <SectionLabel id="impact-heading">OUR IMPACT</SectionLabel>
         </div>
         <ProvenExperience />
       </div>
 
-      <div
-        className="flex flex-row items-start"
-        style={{
-          marginTop: 'var(--spacing-headline-to-stats)',
-          gap: 'var(--spacing-two-col-gap)',
-        }}
-      >
+      <div className="flex flex-row items-start mt-headline-to-stats gap-two-col-gap">
         <ImpactStatistics />
         <section
           aria-label="World map"
@@ -39,7 +24,7 @@ function App() {
         />
       </div>
 
-      <section aria-label="Partner logos" className="mt-[var(--spacing-block-gap)]" />
+      <section aria-label="Partner logos" className="mt-block-gap" />
     </PageLayout>
   )
 }

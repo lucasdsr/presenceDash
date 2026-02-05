@@ -1,7 +1,7 @@
 function PageLayout({ children }) {
   return (
-    <main className="min-h-screen py-12 px-[var(--spacing-page-x)]">
-      <div className="mx-auto max-w-[var(--spacing-page-max)]">
+    <main className="min-h-screen py-12 px-page-x">
+      <div className="mx-auto max-w-page">
         {children}
       </div>
     </main>

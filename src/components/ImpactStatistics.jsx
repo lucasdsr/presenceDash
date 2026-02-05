@@ -22,8 +22,7 @@ const STATS = [
 function ImpactStatistics() {
   return (
     <aside
-      className="flex flex-col items-center"
-      style={{ width: 'var(--width-impact-stats)' }}
+      className="flex flex-col items-center w-impact-stats"
       aria-label="Impact statistics"
     >
       {STATS.map((stat, index) => (
@@ -34,7 +33,7 @@ function ImpactStatistics() {
             description={stat.description}
           />
           {index < STATS.length - 1 && (
-            <Divider className="w-full mt-[var(--spacing-stat-block-gap)] mb-[var(--spacing-stat-block-gap)]" />
+            <Divider className="w-full mt-stat-block-gap mb-stat-block-gap" />
           )}
         </div>
       ))}
