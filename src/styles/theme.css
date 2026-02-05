@@ -1,0 +1,37 @@
+:root {
+  --font-poppins: 'Poppins', system-ui, sans-serif;
+
+  --color-primary: #020F5B;
+  --color-accent: #062EFE;
+  --color-text-muted: #46508A;
+  --color-divider: #B8C6E5;
+  --color-card-bg: #F5F7FA;
+  --color-bg: #FFFFFF;
+
+  --radius-card: 10px;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  --text-section-label: 0.75rem;
+  --text-section-label-weight: 500;
+  --text-stat-number: 2.5rem;
+  --text-stat-number-weight: 700;
+  --text-stat-title: 1rem;
+  --text-stat-title-weight: 700;
+  --text-stat-muted: 0.875rem;
+  --text-stat-muted-weight: 400;
+  --text-headline: 2.25rem;
+  --text-headline-weight: 700;
+  --text-subheadline: 1.125rem;
+  --text-subheadline-weight: 500;
+  --text-body: 1rem;
+  --text-body-weight: 400;
+  --text-body-line: 1.6;
+
+  --spacing-section-label-gap: 0.5rem;
+  --spacing-block-gap: 2rem;
+  --spacing-column-gap: 3rem;
+  --spacing-page-x: 1.5rem;
+  --spacing-page-max: 1200px;
+  --spacing-grid-gap: 1rem;
+  --spacing-card-padding: 1.25rem;
+}
