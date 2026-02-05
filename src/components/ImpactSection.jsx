@@ -4,7 +4,6 @@ function ImpactSection({ children }) {
   return (
     <section
       aria-labelledby="impact-heading"
-      className="mb-[var(--spacing-block-gap)]"
     >
       <div className="flex w-full items-end gap-0" aria-hidden>
         <div
@@ -17,8 +16,11 @@ function ImpactSection({ children }) {
           }}
         />
         <div
-          className="h-px flex-1 shrink-0"
-          style={{ backgroundColor: "var(--color-divider)" }}
+          className="flex-1 shrink-0"
+          style={{
+            height: "1px",
+            backgroundColor: "var(--color-divider)",
+          }}
         />
       </div>
       <SectionLabel
