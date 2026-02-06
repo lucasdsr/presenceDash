@@ -68,7 +68,7 @@ function WorldMap() {
       aria-label="World presence map"
       className="flex-1 flex justify-center items-center min-w-0"
     >
-      <div className="relative w-[1080px] h-[718px] shrink-0">
+      <div className="relative w-[1080px] h-[718px] shrink-0 overflow-visible">
         <img
           src="/assets/map/map-no-pins.svg"
           alt=""
@@ -77,11 +77,12 @@ function WorldMap() {
           decoding="async"
           className="absolute inset-0 w-full h-full object-contain"
         />
-        <div className="absolute left-1/2 top-1/2 w-[950px] h-[445px] -translate-x-[52%] -translate-y-[40%]">
+        <div className="absolute left-1/2 top-1/2 w-[950px] h-[445px] -translate-x-[52%] -translate-y-[40%] overflow-visible">
           <svg
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain overflow-visible"
             viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
             preserveAspectRatio="xMidYMid meet"
+            style={{ overflow: 'visible' }}
             aria-hidden
           >
           <g>
