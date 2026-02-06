@@ -4,7 +4,7 @@ function SectionLabel({ id, className = '', children }: SectionLabelProps) {
   return (
     <p
       id={id}
-      className={`uppercase tracking-[0.04em] text-primary text-section-label font-section-label font-semibold ${className}`.trim()}
+      className={`font-sans font-semibold text-[16px] leading-[16px] tracking-[0.04em] uppercase text-text-muted w-our-impact h-[16px] flex-none order-0 grow-0 ${className}`.trim()}
     >
       {children}
     </p>
