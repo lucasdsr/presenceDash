@@ -1,5 +1,6 @@
 import { useMemo, useState, useRef, useEffect } from 'react'
 import PartnerLogoCard from './PartnerLogoCard'
+import PaginationDots from './PaginationDots'
 
 const PARTNER_LOGOS = [
   { src: '/assets/partners/att.svg', alt: 'AT&T' },
@@ -27,32 +28,6 @@ function shuffle(array) {
   return out
 }
 
-function PaginationDots({ pageCount, currentPage, onPageSelect }) {
-  if (pageCount <= 1) return null
-
-  return (
-    <div
-      className="flex justify-center gap-1.5 mt-4"
-      role="tablist"
-      aria-label="Partner logos pages"
-    >
-      {Array.from({ length: pageCount }, (_, i) => (
-        <button
-          key={i}
-          type="button"
-          role="tab"
-          aria-selected={i === currentPage}
-          aria-label={`Page ${i + 1}`}
-          onClick={() => onPageSelect(i)}
-          className={`h-1 w-6 rounded-sm transition-colors ${
-            i === currentPage ? 'bg-accent' : 'bg-divider hover:bg-text-muted'
-          }`}
-        />
-      ))}
-    </div>
-  )
-}
-
 function PartnerLogosGrid({ className = '' }) {
   const scrollRef = useRef(null)
   const [containerWidth, setContainerWidth] = useState(0)
@@ -65,6 +40,11 @@ function PartnerLogosGrid({ className = '' }) {
     })
     return shuffle(filled)
   }, [])
+
+  const pageCount = useMemo(
+    () => (containerWidth > 0 ? Math.ceil(TOTAL_CONTENT_WIDTH / containerWidth) : 1),
+    [containerWidth]
+  )
 
   useEffect(() => {
     const el = scrollRef.current
@@ -83,18 +63,20 @@ function PartnerLogosGrid({ className = '' }) {
     if (!el) return
 
     const onScroll = () => {
-      if (containerWidth <= 0) return
-      const totalPages = Math.ceil(TOTAL_CONTENT_WIDTH / containerWidth)
-      const page = Math.round(el.scrollLeft / containerWidth)
-      setCurrentPage(Math.min(Math.max(0, page), totalPages - 1))
+      if (pageCount <= 1) return
+      const maxScroll = TOTAL_CONTENT_WIDTH - containerWidth
+      const scrollLeft = el.scrollLeft
+      const atEnd = maxScroll <= 0 || scrollLeft >= maxScroll - 1
+      const page = atEnd
+        ? pageCount - 1
+        : Math.min(Math.max(0, Math.round(scrollLeft / containerWidth)), pageCount - 1)
+      setCurrentPage(page)
     }
 
     el.addEventListener('scroll', onScroll, { passive: true })
     return () => el.removeEventListener('scroll', onScroll)
-  }, [containerWidth])
+  }, [containerWidth, pageCount])
 
-  const pageCount =
-    containerWidth > 0 ? Math.ceil(TOTAL_CONTENT_WIDTH / containerWidth) : 1
   const fitsAllColumns = containerWidth >= TOTAL_CONTENT_WIDTH - 0.5
   const showPagination = pageCount > 1 && !fitsAllColumns
 
@@ -106,7 +88,7 @@ function PartnerLogosGrid({ className = '' }) {
     const targetScroll = Math.min(pageIndex * containerWidth, Math.max(0, maxScroll))
     el.scrollTo({
       left: targetScroll,
-      behavior: 'smooth',
+      behavior: 'auto',
     })
   }
 

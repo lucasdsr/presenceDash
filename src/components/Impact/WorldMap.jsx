@@ -82,7 +82,6 @@ function WorldMap({ className = '' }) {
             className="w-full h-full object-contain overflow-visible"
             viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
             preserveAspectRatio="xMidYMid meet"
-            style={{ overflow: 'visible' }}
             aria-hidden
           >
           <g>
