@@ -12,7 +12,7 @@ function App() {
       <SectionTopDivider />
 
       <div className="flex flex-col md:flex-row items-start mt-section-label-gap-mobile md:mt-section-label-gap gap-two-col-gap min-w-0 w-full max-w-full">
-        <div className="w-full md:w-our-impact shrink-0 min-w-0" aria-labelledby="impact-heading">
+        <div className="w-full md:w-[220px] lg:w-[300px] xl:w-our-impact shrink-0 min-w-0" aria-labelledby="impact-heading">
           <SectionLabel id="impact-heading">OUR IMPACT</SectionLabel>
         </div>
         <ProvenExperience />

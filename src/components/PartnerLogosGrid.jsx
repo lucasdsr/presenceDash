@@ -44,10 +44,8 @@ function PaginationDots({ pageCount, currentPage, onPageSelect }) {
           aria-selected={i === currentPage}
           aria-label={`Page ${i + 1}`}
           onClick={() => onPageSelect(i)}
-          className={`h-1.5 rounded-sm transition-all ${
-            i === currentPage
-              ? 'w-6 bg-accent'
-              : 'w-1.5 bg-divider hover:bg-text-muted'
+          className={`h-1 w-6 rounded-sm transition-colors ${
+            i === currentPage ? 'bg-accent' : 'bg-divider hover:bg-text-muted'
           }`}
         />
       ))}
