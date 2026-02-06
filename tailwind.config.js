@@ -13,6 +13,8 @@ export default {
         divider: '#B8C6E5',
         'card-bg': '#F5F7FA',
         bg: '#FFFFFF',
+        'neutral-100': '#F0F1FA',
+        'partner-border': '#D8D9E7',
       },
       fontFamily: {
         sans: ['Poppins', 'system-ui', 'sans-serif'],
@@ -50,9 +52,11 @@ export default {
         'our-impact': '408px',
         'impact-stats': '184px',
         'proven': '744px',
+        'partner-card': '92px',
       },
       height: {
         'section-underline': '4px',
+        'partner-card': '68px',
       },
       maxWidth: {
         'page': '1200px',
@@ -70,6 +74,9 @@ export default {
         'page-x': '1.5rem',
         'grid-gap': '1rem',
         'card-padding': '1.25rem',
+        'partner-gap-x': '18px',
+        'partner-gap-y': '16px',
+        'partner-section': '130px',
       },
     },
   },

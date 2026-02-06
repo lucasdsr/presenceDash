@@ -3,6 +3,7 @@ import SectionTopDivider from './components/SectionTopDivider'
 import SectionLabel from './components/SectionLabel'
 import ProvenExperience from './components/ProvenExperience'
 import ImpactStatistics from './components/ImpactStatistics'
+import PartnerLogosGrid from './components/PartnerLogosGrid'
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         />
       </div>
 
-      <section aria-label="Partner logos" className="mt-block-gap" />
+      <PartnerLogosGrid className="mt-partner-section" />
     </PageLayout>
   )
 }
