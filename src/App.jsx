@@ -3,6 +3,7 @@ import SectionTopDivider from './components/SectionTopDivider'
 import SectionLabel from './components/SectionLabel'
 import ProvenExperience from './components/ProvenExperience'
 import ImpactStatistics from './components/ImpactStatistics'
+import WorldMap from './components/WorldMap'
 import PartnerLogosGrid from './components/PartnerLogosGrid'
 
 function App() {
@@ -17,12 +18,9 @@ function App() {
         <ProvenExperience />
       </div>
 
-      <div className="flex flex-row items-start mt-headline-to-stats gap-two-col-gap">
+      <div className="flex flex-row items-center mt-headline-to-stats gap-two-col-gap">
         <ImpactStatistics />
-        <section
-          aria-label="World map"
-          className="flex-1 min-h-[400px]"
-        />
+        <WorldMap />
       </div>
 
       <PartnerLogosGrid className="mt-partner-section" />
