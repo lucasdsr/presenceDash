@@ -1,10 +1,10 @@
 import PageLayout from './components/PageLayout'
 import SectionTopDivider from './components/SectionTopDivider'
 import SectionLabel from './components/SectionLabel'
-import ProvenExperience from './components/ProvenExperience'
-import ImpactStatistics from './components/ImpactStatistics'
-import WorldMap from './components/WorldMap'
-import PartnerLogosGrid from './components/PartnerLogosGrid'
+import ProvenExperience from './components/Impact/ProvenExperience'
+import ImpactStatistics from './components/Impact/ImpactStatistics'
+import WorldMap from './components/Impact/WorldMap'
+import PartnerLogosGrid from './components/Partners/PartnerLogosGrid'
 
 function App() {
   return (

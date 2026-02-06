@@ -1,4 +1,4 @@
-import SectionLabel from './SectionLabel'
+import SectionLabel from '../SectionLabel'
 
 function ImpactSection({ children }) {
   return (

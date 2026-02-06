@@ -1,5 +1,5 @@
 import StatBlock from './StatBlock'
-import Divider from './Divider'
+import Divider from '../Divider'
 
 const STATS = [
   {

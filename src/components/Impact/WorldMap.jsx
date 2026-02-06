@@ -77,7 +77,7 @@ function WorldMap({ className = '' }) {
           decoding="async"
           className="absolute inset-0 w-full h-full object-contain"
         />
-        <div className="absolute left-1/2 top-1/2 w-[88%] max-w-[950px] aspect-[950/445] -translate-x-1/2 -translate-y-1/2 overflow-visible">
+        <div className="absolute left-1/2 top-1/2 w-[88%] max-w-[950px] aspect-[950/445] -translate-x-[52%] -translate-y-[41%] overflow-visible">
           <svg
             className="w-full h-full object-contain overflow-visible"
             viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
