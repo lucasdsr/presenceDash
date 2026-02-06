@@ -72,11 +72,12 @@ function WorldMap({ className = '' }: WorldMapProps) {
     >
       <div className="relative w-full max-w-[1080px] aspect-[1080/718] overflow-visible">
         <img
-          src="/assets/map/map-no-pins.svg"
+          src="/assets/map/map-no-pins.webp"
+          srcSet="/assets/map/map-no-pins.webp 952w, /assets/map/map-no-pins@2x.webp 1904w"
+          sizes="(max-width: 1080px) 100vw, 1080px"
           alt=""
           role="presentation"
-          loading="lazy"
-          decoding="async"
+          fetchPriority="high"
           className="absolute inset-0 w-full h-full object-contain"
         />
         <div className="absolute left-1/2 top-1/2 w-[88%] max-w-[950px] aspect-[950/445] -translate-x-[52%] -translate-y-[41%] overflow-visible">

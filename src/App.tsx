@@ -1,10 +1,12 @@
+import { lazy, Suspense } from 'react'
 import PageLayout from './components/PageLayout'
 import SectionTopDivider from './components/SectionTopDivider'
 import SectionLabel from './components/SectionLabel'
 import ProvenExperience from './components/Impact/ProvenExperience'
 import ImpactStatistics from './components/Impact/ImpactStatistics'
 import WorldMap from './components/Impact/WorldMap'
-import PartnerLogosGrid from './components/Partners/PartnerLogosGrid'
+
+const PartnerLogosGrid = lazy(() => import('./components/Partners/PartnerLogosGrid'))
 
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
         <ImpactStatistics className="order-2 md:order-1 w-full md:w-auto shrink-0" />
       </div>
 
-      <PartnerLogosGrid className="mt-partner-section-mobile md:mt-partner-section" />
+      <Suspense fallback={<section className="mt-partner-section-mobile md:mt-partner-section min-h-[120px]" aria-label="Partner logos" />}>
+        <PartnerLogosGrid className="mt-partner-section-mobile md:mt-partner-section" />
+      </Suspense>
     </PageLayout>
   )
 }
