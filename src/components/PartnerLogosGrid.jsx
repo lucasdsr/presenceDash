@@ -34,7 +34,7 @@ function PartnerLogosGrid({ className = '' }) {
 
   return (
     <section
-      className={`grid grid-cols-12 gap-x-partner-gap-x gap-y-partner-gap-y w-full ${className}`.trim()}
+      className={`grid gap-x-partner-gap-x gap-y-partner-gap-y w-max [grid-template-columns:repeat(12,92px)] ${className}`.trim()}
       aria-label="Partner logos"
     >
       {cells.map((logo, index) => (

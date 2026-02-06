@@ -74,7 +74,7 @@ export default {
         'page-x': '1.5rem',
         'grid-gap': '1rem',
         'card-padding': '1.25rem',
-        'partner-gap-x': '18px',
+        'partner-gap-x': '18.5px',
         'partner-gap-y': '16px',
         'partner-section': '130px',
       },
