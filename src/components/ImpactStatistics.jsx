@@ -19,14 +19,14 @@ const STATS = [
   },
 ]
 
-function ImpactStatistics() {
+function ImpactStatistics({ className = '' }) {
   return (
     <aside
-      className="flex flex-col items-center w-impact-stats"
+      className={`flex flex-col items-center md:items-center w-full md:w-impact-stats ${className}`.trim()}
       aria-label="Impact statistics"
     >
       {STATS.map((stat, index) => (
-        <div key={stat.title} className="flex flex-col items-center w-full">
+        <div key={stat.title} className="flex flex-col items-center md:items-start w-full">
           <StatBlock
             number={stat.number}
             title={stat.title}

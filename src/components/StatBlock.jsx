@@ -1,7 +1,7 @@
 function StatBlock({ number, title, description }) {
   return (
-    <div className="flex flex-col items-start gap-stat-inner-gap w-impact-stats">
-      <div className="flex flex-row items-start gap-stat-inner-gap">
+    <div className="flex flex-col items-center md:items-start gap-stat-inner-gap w-full md:w-impact-stats text-center md:text-left">
+      <div className="flex flex-row items-center justify-center md:justify-start gap-stat-inner-gap">
         <span className="font-sans font-medium text-stat-number leading-stat-number text-primary">
           {number}
         </span>

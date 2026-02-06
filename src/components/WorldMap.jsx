@@ -60,15 +60,15 @@ const MAP_PINS = [
   { cx: 40, cy: 175.625 },
 ]
 
-function WorldMap() {
+function WorldMap({ className = '' }) {
   const [hoveredIndex, setHoveredIndex] = useState(null)
 
   return (
     <section
       aria-label="World presence map"
-      className="flex-1 flex justify-center items-center min-w-0"
+      className={`flex-1 flex justify-center items-center min-w-0 ${className}`.trim()}
     >
-      <div className="relative w-[1080px] h-[718px] shrink-0 overflow-visible">
+      <div className="relative w-full max-w-[1080px] aspect-[1080/718] overflow-visible">
         <img
           src="/assets/map/map-no-pins.svg"
           alt=""
@@ -77,7 +77,7 @@ function WorldMap() {
           decoding="async"
           className="absolute inset-0 w-full h-full object-contain"
         />
-        <div className="absolute left-1/2 top-1/2 w-[950px] h-[445px] -translate-x-[52%] -translate-y-[40%] overflow-visible">
+        <div className="absolute left-1/2 top-1/2 w-[88%] max-w-[950px] aspect-[950/445] -translate-x-1/2 -translate-y-1/2 overflow-visible">
           <svg
             className="w-full h-full object-contain overflow-visible"
             viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}

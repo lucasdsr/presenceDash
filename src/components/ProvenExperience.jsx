@@ -1,7 +1,7 @@
 function ProvenExperience() {
   return (
     <div
-      className="flex flex-col items-start shrink-0 gap-proven-gap max-w-proven"
+      className="flex flex-col items-start w-full min-w-0 flex-1 gap-proven-gap max-w-proven"
       aria-label="Proven experience"
     >
       <h2 className="font-sans font-medium text-proven-title leading-proven-title text-primary">

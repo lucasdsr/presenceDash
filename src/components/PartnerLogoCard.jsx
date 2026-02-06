@@ -1,7 +1,7 @@
-export default function PartnerLogoCard({ src, alt }) {
+export default function PartnerLogoCard({ src, alt, className = '' }) {
   return (
     <div
-      className="relative isolate w-partner-card h-partner-card bg-white shrink-0 flex items-center justify-center"
+      className={`relative isolate w-partner-card h-partner-card bg-white shrink-0 flex items-center justify-center ${className}`.trim()}
       aria-hidden
     >
       <img
