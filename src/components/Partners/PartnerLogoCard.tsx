@@ -1,4 +1,6 @@
-export default function PartnerLogoCard({ src, alt, className = '' }) {
+import type { PartnerLogoCardProps } from './PartnerLogoCard.interface'
+
+export default function PartnerLogoCard({ src, alt, className = '' }: PartnerLogoCardProps) {
   return (
     <div
       className={`relative isolate w-partner-card h-partner-card bg-white shrink-0 flex items-center justify-center ${className}`.trim()}

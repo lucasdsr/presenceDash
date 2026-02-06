@@ -1,4 +1,6 @@
-function StatBlock({ number, title, description }) {
+import type { StatBlockProps } from './StatBlock.interface'
+
+function StatBlock({ number, title, description }: StatBlockProps) {
   return (
     <>
       <div className="flex flex-row items-center gap-4 w-full md:hidden text-left">

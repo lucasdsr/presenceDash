@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import type { MapPin } from './WorldMap.interface'
+import type { WorldMapProps } from './WorldMap.interface'
 
 const PIN_ACCENT = '#062EFE'
 const PIN_PRIMARY = '#020F5B'
@@ -14,7 +16,7 @@ const BADGE_TOP_OFFSET = 48
 const PIN_TRANSITION = 'r 0.2s ease-out, fill 0.2s ease-out'
 const BADGE_TRANSITION = 'opacity 0.2s ease-out'
 
-const MAP_PINS = [
+const MAP_PINS: MapPin[] = [
   { cx: 390, cy: 134.625 },
   { cx: 349, cy: 158.625 },
   { cx: 365, cy: 225.625 },
@@ -60,8 +62,8 @@ const MAP_PINS = [
   { cx: 40, cy: 175.625 },
 ]
 
-function WorldMap({ className = '' }) {
-  const [hoveredIndex, setHoveredIndex] = useState(null)
+function WorldMap({ className = '' }: WorldMapProps) {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
     <section

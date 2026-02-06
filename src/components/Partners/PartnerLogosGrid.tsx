@@ -1,8 +1,10 @@
 import { useMemo, useState, useRef, useEffect } from 'react'
 import PartnerLogoCard from './PartnerLogoCard'
 import PaginationDots from './PaginationDots'
+import type { PartnerLogo } from './PartnerLogoCard.interface'
+import type { PartnerLogosGridProps } from './PartnerLogosGrid.interface'
 
-const PARTNER_LOGOS = [
+const PARTNER_LOGOS: PartnerLogo[] = [
   { src: '/assets/partners/att.svg', alt: 'AT&T' },
   { src: '/assets/partners/claro.svg', alt: 'Claro' },
   { src: '/assets/partners/oi.svg', alt: 'Oi' },
@@ -19,7 +21,7 @@ const CARD_GAP_X = 18.5
 const CARD_GAP_Y = 16
 const TOTAL_CONTENT_WIDTH = COLS * CARD_WIDTH + (COLS - 1) * CARD_GAP_X
 
-function shuffle(array) {
+function shuffle<T>(array: T[]): T[] {
   const out = [...array]
   for (let i = out.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
@@ -28,8 +30,8 @@ function shuffle(array) {
   return out
 }
 
-function PartnerLogosGrid({ className = '' }) {
-  const scrollRef = useRef(null)
+function PartnerLogosGrid({ className = '' }: PartnerLogosGridProps) {
+  const scrollRef = useRef<HTMLDivElement | null>(null)
   const [containerWidth, setContainerWidth] = useState(0)
   const [currentPage, setCurrentPage] = useState(0)
 
@@ -80,7 +82,7 @@ function PartnerLogosGrid({ className = '' }) {
   const fitsAllColumns = containerWidth >= TOTAL_CONTENT_WIDTH - 0.5
   const showPagination = pageCount > 1 && !fitsAllColumns
 
-  const scrollToPage = (pageIndex) => {
+  const scrollToPage = (pageIndex: number) => {
     const el = scrollRef.current
     if (!el || containerWidth <= 0) return
     setCurrentPage(pageIndex)

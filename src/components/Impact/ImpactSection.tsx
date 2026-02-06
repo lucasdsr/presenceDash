@@ -1,7 +1,8 @@
 import SectionLabel from '../SectionLabel'
 import SectionTopDivider from '../SectionTopDivider'
+import type { ImpactSectionProps } from './ImpactSection.interface'
 
-function ImpactSection({ children }) {
+function ImpactSection({ children }: ImpactSectionProps) {
   return (
     <section aria-labelledby="impact-heading">
       <SectionTopDivider />

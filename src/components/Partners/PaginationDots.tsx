@@ -1,4 +1,6 @@
-function PaginationDots({ pageCount, currentPage, onPageSelect }) {
+import type { PaginationDotsProps } from './PaginationDots.interface'
+
+function PaginationDots({ pageCount, currentPage, onPageSelect }: PaginationDotsProps) {
   if (pageCount <= 1) return null
 
   return (

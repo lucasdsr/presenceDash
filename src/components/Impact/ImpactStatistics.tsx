@@ -1,7 +1,9 @@
 import StatBlock from './StatBlock'
 import Divider from '../Divider'
+import type { Stat } from './StatBlock.interface'
+import type { ImpactStatisticsProps } from './ImpactStatistics.interface'
 
-const STATS = [
+const STATS: Stat[] = [
   {
     number: '45',
     title: 'Countries',
@@ -19,7 +21,7 @@ const STATS = [
   },
 ]
 
-function ImpactStatistics({ className = '' }) {
+function ImpactStatistics({ className = '' }: ImpactStatisticsProps) {
   return (
     <aside
       className={`flex flex-col items-start w-full md:w-impact-stats ${className}`.trim()}

@@ -1,6 +1,7 @@
 import React from 'react'
+import type { PageLayoutProps } from './PageLayout.interface'
 
-function PageLayout({ children }) {
+function PageLayout({ children }: PageLayoutProps) {
   const childrenArray = React.Children.toArray(children)
   const contentChildren = childrenArray.slice(0, -1)
   const fullWidthChildren = childrenArray.slice(-1)
